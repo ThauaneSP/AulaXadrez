@@ -22,7 +22,7 @@ namespace Aulaxadrez
                         Console.WriteLine();
                         Console.Write("Origem: ");
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
-                        partida.validarposicaoDeOrigem(origem);
+                        partida.validarPosicaoDeOrigem(origem);
 
                         bool[,] posicoesPossiveis = partida.tab.peca(origem).movimentosPossiveis();
 
@@ -31,7 +31,7 @@ namespace Aulaxadrez
 
                         Console.Write("Destino: ");
                         Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
-                        partida.validarposicaoDeDestino(origem, destino);
+                        partida.validarPosicaoDeDestino(origem, destino);
                         partida.realizaJogada(origem, destino);
 
                     }
@@ -41,7 +41,11 @@ namespace Aulaxadrez
                     }
                 }
 
-        }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
+
+
+            }
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message); 
