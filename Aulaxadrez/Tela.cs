@@ -22,7 +22,7 @@ namespace Aulaxadrez
             else {
                 Console.WriteLine("XEQUEMATE!");
                 Console.WriteLine("Vencedor: " + partida.jogadorAtual);
-            }
+            } 
         }
 
 
